@@ -36,21 +36,29 @@ export const FlowerPetal = ({
   }
 
   return (
-    <Button
-      onClick={onClick}
-      className={cn(
-        "w-14 h-14 rounded-full shadow-petal transition-all duration-200",
-        "bg-petal-base border border-petal-border",
-        "hover:bg-petal-hover hover:scale-105 hover:shadow-soft",
-        "active:scale-95 active:bg-petal-active",
-        "text-foreground font-semibold text-lg",
+    <div className="relative">
+      {/* Petal shape */}
+      <div className={cn(
+        "w-16 h-20 relative cursor-pointer transition-all duration-200",
+        "before:content-[''] before:absolute before:inset-0",
+        "before:bg-petal-base before:border before:border-petal-border",
+        "before:rounded-t-full before:rounded-b-lg",
+        "before:shadow-petal before:transition-all before:duration-200",
+        "hover:before:bg-petal-hover hover:before:shadow-soft hover:scale-105",
+        "active:scale-95 active:before:bg-petal-active",
+        isSelected && "before:ring-2 before:ring-primary before:ring-offset-2 before:bg-petal-active scale-105",
         "animate-petal-float",
-        isSelected && "ring-2 ring-primary ring-offset-2 bg-petal-active scale-105",
         className
       )}
-      variant="ghost"
-    >
-      {letter}
-    </Button>
+      onClick={onClick}
+      >
+        {/* Letter content */}
+        <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+          <span className="text-foreground font-semibold text-lg mt-1">
+            {letter}
+          </span>
+        </div>
+      </div>
+    </div>
   );
 };

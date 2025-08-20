@@ -107,13 +107,14 @@ export const WordGame = () => {
     if (isCenter) return {};
     
     const angle = (index * 60) - 90;
-    const radius = 70;
+    const radius = 80; // Increased radius for petal shapes
     const x = Math.cos(angle * Math.PI / 180) * radius;
     const y = Math.sin(angle * Math.PI / 180) * radius;
     
     return {
       left: `calc(50% + ${x}px)`,
-      top: `calc(50% + ${y}px)`
+      top: `calc(50% + ${y}px)`,
+      transform: `translate(-50%, -50%) rotate(${angle + 90}deg)` // Rotate petals to point toward center
     };
   };
 
@@ -137,7 +138,7 @@ export const WordGame = () => {
         </div>
 
         {/* Flower letter layout */}
-        <div className="relative w-64 h-64 mx-auto">
+        <div className="relative w-80 h-80 mx-auto">
           {letters.map((letter, index) => {
             const adjustedIndex = letter.isCenter ? 0 : index - 1;
             return (

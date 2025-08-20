@@ -107,14 +107,14 @@ export const WordGame = () => {
     if (isCenter) return {};
     
     const angle = (index * 60) - 90;
-    const radius = 90; // Increased radius for larger organic petals
+    const radius = 80;
     const x = Math.cos(angle * Math.PI / 180) * radius;
     const y = Math.sin(angle * Math.PI / 180) * radius;
     
     return {
       left: `calc(50% + ${x}px)`,
       top: `calc(50% + ${y}px)`,
-      transform: `translate(-50%, -50%) rotate(${angle + 90}deg)` // Rotate petals to point toward center
+      transform: `translate(-50%, -50%)` // Remove rotation so letters stay upright
     };
   };
 

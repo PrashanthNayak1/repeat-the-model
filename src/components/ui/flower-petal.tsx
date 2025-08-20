@@ -37,12 +37,12 @@ export const FlowerPetal = ({
 
   return (
     <div className="relative">
-      {/* Petal shape - rounded organic petal */}
+      {/* Petal shape - simple oval like in reference */}
       <div className={cn(
-        "w-20 h-24 relative cursor-pointer transition-all duration-200",
+        "w-16 h-24 relative cursor-pointer transition-all duration-200",
         "before:content-[''] before:absolute before:inset-0",
         "before:bg-petal-base before:border before:border-petal-border",
-        "before:rounded-[50%_50%_50%_50%/60%_60%_40%_40%]", // Organic petal shape
+        "before:rounded-full", // Simple oval shape
         "before:shadow-petal before:transition-all before:duration-200",
         "hover:before:bg-petal-hover hover:before:shadow-soft hover:scale-105",
         "active:scale-95 active:before:bg-petal-active",
@@ -52,9 +52,9 @@ export const FlowerPetal = ({
       )}
       onClick={onClick}
       >
-        {/* Letter content */}
+        {/* Letter content - positioned to stay upright */}
         <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
-          <span className="text-foreground font-semibold text-lg">
+          <span className="text-foreground font-bold text-xl">
             {letter}
           </span>
         </div>

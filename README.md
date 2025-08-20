@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/917a20c6-4012-4a44-b88e-fec53b6f81c6
+**URL**: [https://lovable.dev/projects/917a20c6-4012-4a44-b88e-fec53b6f81c6](https://github.com/PrashanthNayak1/repeat-the-model)
 
 ## How can I edit this code?
 

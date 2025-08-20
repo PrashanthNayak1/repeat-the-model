@@ -10,7 +10,7 @@ There are several ways of editing your application.
 
 **Use Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/917a20c6-4012-4a44-b88e-fec53b6f81c6) and start prompting.
+Simply visit the [[Lovable Project](https://lovable.dev/projects/917a20c6-4012-4a44-b88e-fec53b6f81c6) ](https://github.com/PrashanthNayak1/repeat-the-model)and start prompting.
 
 Changes made via Lovable will be committed automatically to this repo.
 

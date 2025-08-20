@@ -107,7 +107,7 @@ export const WordGame = () => {
     if (isCenter) return {};
     
     const angle = (index * 60) - 90;
-    const radius = 80; // Increased radius for petal shapes
+    const radius = 90; // Increased radius for larger organic petals
     const x = Math.cos(angle * Math.PI / 180) * radius;
     const y = Math.sin(angle * Math.PI / 180) * radius;
     
